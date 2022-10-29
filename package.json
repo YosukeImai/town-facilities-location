@@ -1,0 +1,24 @@
+{
+  "name": "town-facilities-location",
+  "version": "1.0.0",
+  "description": "API for obtaining latitude and longitude of the town facilities",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YosukeImai/town-facilities-location.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YosukeImai/town-facilities-location/issues"
+  },
+  "homepage": "https://github.com/YosukeImai/town-facilities-location#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
