@@ -16,6 +16,7 @@ async function assertDatabaseConnectionOK(){
 }
 
 async function init() {
+    await assertDatabaseConnectionOK();
     console.log(`Starting TOWN FACILITIES LOCATION on port ${PORT}...`);
     app.listen(PORT);
 }

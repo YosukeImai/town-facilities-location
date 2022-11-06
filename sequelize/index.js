@@ -10,4 +10,6 @@ for (const modelDefiner of modelDefiners){
     modelDefiner(sequelize);
 }
 
+sequelize.sync({ logging: console.log});
+
 module.exports = sequelize;

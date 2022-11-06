@@ -16,5 +16,13 @@ module.exports = (sequelize)=> {
                 is: /^\w{3,}$/
             }
         },
+    },
+    {
+        freezeTableName: true,
+        timestamps: false,
+        // If don't want createdAt
+        createdAt: false,
+        // If don't want updatedAt
+        updatedAt: false,
     });
 }

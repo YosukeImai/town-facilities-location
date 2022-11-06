@@ -1,19 +1,11 @@
 'use strict';
-const express = require('express');
-const router = express.Router();
+const { models } = require('../../sequelize');
 
-let facilities = [
-    {id: '1', name: 'name1'},
-    {id: '2', name: 'name2'}
-]
+async function getAll(req, res) {
+	const facilities = await models.facility.findAll();
+	res.status(200).json(facilities);
+};
 
-router.route('/')
-    .get((req, res)=> {
-
-        res.json(facilities);
-    })
-    .post((req, res) => {
-        //
-    })
-
-module.exports = router;
+module.exports = {
+	getAll,
+};
