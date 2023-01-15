@@ -1,16 +1,16 @@
 FROM node:16
 
 # アプリケーションディレクトリを作成する
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # アプリケーションの依存関係をインストールする
-COPY package*.json ./
+COPY api/package*.json ./
 
 RUN npm install
 # RUN npm install --only=production
 
 #アプリケーションのソースをバンドルする
-COPY . .
+COPY ./api .
 
 EXPOSE 8080
 
