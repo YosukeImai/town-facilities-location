@@ -12,3 +12,16 @@ services:
     volumes:
       - ./api:/app
       - /app/node_modules
+  frontend:
+    container_name: tflfront
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    command: "npm start"
+    ports:
+      - 3000:3000
+    volumes:
+      - ./frontend:/app
+    tty: true
+    environment:
+      - WATCHPACK_POLLING=true
