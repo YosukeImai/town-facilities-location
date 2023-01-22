@@ -17,11 +17,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.frontend
-    command: "npm start"
+    command: "npm run dev"
     ports:
       - 3000:3000
     volumes:
       - ./frontend:/app
+      - /app/node_modules
     tty: true
     environment:
       - WATCHPACK_POLLING=true
